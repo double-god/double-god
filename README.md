@@ -16,4 +16,4 @@ Here are some ideas to get you started:
 - ⚡ Fun fact: ...
 -->
 ![Metrics](/github-metrics.svg)
-![My 3D Contrib](profile-3d-contrib/profile-night-rainbow.svg)
+![My 3D Contrib](profile-3d-contrib/profile-season-animate.svg)
