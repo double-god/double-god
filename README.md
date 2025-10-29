@@ -1,4 +1,4 @@
-## 👋[![Typing SVG](https://readme-typing-svg.demolab.com/?lines=摩+西+摩+西;miska+muska+米+奇+妙+妙+屋)](https://github.com/DenverCoder1/readme-typing-svg)
+## [![Typing SVG](https://readme-typing-svg.demolab.com/?lines=摩+西+摩+西;miska+muska+米+奇+妙+妙+屋)](https://github.com/DenverCoder1/readme-typing-svg)
 
 
 <!--
