@@ -17,4 +17,4 @@ Here are some ideas to get you started:
 -->
 ![Metrics](/github-metrics.svg)
 ![My 3D Contrib](profile-3d-contrib/profile-gitblock.svg)
-![Anurag's GitHub stats](https://github-readme-stats.vercel.app/api?double-god=anuraghazra&show_icons=true)
+![Anurag's GitHub stats](https://github-readme-stats.vercel.app/apidouble-god=anuraghazra&show_icons=true)
