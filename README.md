@@ -1,4 +1,5 @@
-## 摩西摩西，miska muska 米奇妙妙屋！ 👋
+## 👋![Typing SVG](https://readme-typing-svg.demolab.com/摩；西；摩；西；，；miska muska 米；奇；妙；妙；屋！=First+line+of+text;Second+line+of+text)
+
 
 <!--
 **double-god/double-god** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
