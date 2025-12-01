@@ -13,16 +13,9 @@ jobs:
     permissions:
       contents: write
     steps:
-      - uses: lowlighter/metrics@latest
-        with:
+     - uses: lowlighter/metrics@latest
+       with:
           # Your GitHub token
-          # The following scopes are required:
-          #  - public_access (default scope)
-          # The following additional scopes may be required:
-          #  - read:org      (for organization related metrics)
-          #  - read:user     (for user related data)
-          #  - read:packages (for some packages related data)
-          #  - repo          (optional, if you want to include private repositories)
           token: ${{ secrets.METRICS_TOKEN }}
 
           # Options
@@ -30,3 +23,18 @@ jobs:
           template: classic
           base: header, activity, community, repositories, metadata
           config_timezone: Asia/Shanghai
+          
+          # --- 新增：语言统计配置 ---
+          plugin_languages: yes
+          # 忽略某些语言，防止它们掩盖 Python (例如 HTML/CSS 通常占比很大)
+          # 如果你确实想看 HTML/CSS，把下面这一行删掉即可
+          plugin_languages_ignored:  tex, less, dockerfile, makefile, qmake, lex, cmake, gnuplot
+          
+          # 显示详细信息
+          plugin_languages_details: bytes-size, percentage
+          # 显示原本可能被折叠的“其他”语言
+          plugin_languages_threshold: 0%
+          # 限制显示的语言数量
+          plugin_languages_limit: 8
+          # 分析私有仓库的代码（非常重要！见下文说明）
+          commits_authoring: double-god
