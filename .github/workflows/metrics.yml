@@ -21,10 +21,15 @@ jobs:
           base: header, activity, community, repositories, metadata
           config_timezone: Asia/Shanghai
           
-          # --- 语言统计核心修改 ---
+          # --- 语言统计：严格模式 ---
           plugin_languages: yes
-          # 关键修改1：删掉了 commits_authoring，不再过滤提交人
-          # 关键修改2：开启深入分析，确保扫描所有文件
+          # 关键点：加回了作者验证，过滤掉非你本人写的库文件/框架代码
+          commits_authoring: double-god
+          
+          # 依然忽略 HTML/CSS，因为它们通常不代表编程能力
+          plugin_languages_ignored: html, css
+          
+          # 详细设置
           plugin_languages_analysis_timeout: 15
           plugin_languages_categories: markup, programming
           plugin_languages_colors: github
@@ -33,5 +38,3 @@ jobs:
           plugin_languages_recent_days: 14
           plugin_languages_sections: most-used
           plugin_languages_threshold: 0%
-          # 依然忽略 HTML/CSS 以突显 Python
-          plugin_languages_ignored: html, css
