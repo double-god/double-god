@@ -15,26 +15,23 @@ jobs:
     steps:
      - uses: lowlighter/metrics@latest
        with:
-          # Your GitHub token
           token: ${{ secrets.METRICS_TOKEN }}
-
-          # Options
           user: double-god
           template: classic
           base: header, activity, community, repositories, metadata
           config_timezone: Asia/Shanghai
           
-          # --- 新增：语言统计配置 ---
+          # --- 语言统计核心修改 ---
           plugin_languages: yes
-          # 忽略某些语言，防止它们掩盖 Python (例如 HTML/CSS 通常占比很大)
-          # 如果你确实想看 HTML/CSS，把下面这一行删掉即可
-          plugin_languages_ignored:  tex, less, dockerfile, makefile, qmake, lex, cmake, gnuplot
-          
-          # 显示详细信息
-          plugin_languages_details: bytes-size, percentage
-          # 显示原本可能被折叠的“其他”语言
-          plugin_languages_threshold: 0%
-          # 限制显示的语言数量
+          # 关键修改1：删掉了 commits_authoring，不再过滤提交人
+          # 关键修改2：开启深入分析，确保扫描所有文件
+          plugin_languages_analysis_timeout: 15
+          plugin_languages_categories: markup, programming
+          plugin_languages_colors: github
           plugin_languages_limit: 8
-          # 分析私有仓库的代码（非常重要！见下文说明）
-          commits_authoring: double-god
+          plugin_languages_recent_categories: markup, programming
+          plugin_languages_recent_days: 14
+          plugin_languages_sections: most-used
+          plugin_languages_threshold: 0%
+          # 依然忽略 HTML/CSS 以突显 Python
+          plugin_languages_ignored: html, css
