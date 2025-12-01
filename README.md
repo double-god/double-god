@@ -17,4 +17,4 @@ Here are some ideas to get you started:
 -->
 ![Metrics](/github-metrics.svg)
 ![My 3D Contrib](profile-3d-contrib/profile-gitblock.svg)
-![我的GitHub统计](https://github-readme-stats.ywh.me/api?username=double-god&show_icons=true)
+![我的GitHub统计](https://api.common-tech.io/github-readme-stats/api?username=double-god&show_icons=true&hide_border=true&count_private=true)
